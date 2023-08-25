@@ -36,35 +36,35 @@
 
 <body class="flex bg-zinc-50 items-stretch">
     <div class="flex flex-col bg-zinc-50">  
-        <nav class="flex gap-10 justify-center">
+        <nav class="flex gap-10 p-3 justify-between">
             <h1 class="basis-1/4"> andmarek </h1>
             <h1 class="basis-1/4">Pace Calculator</h1>
             <h1 class="basis-1/2"> About </h1>
         </nav>
 
         <div class="flex flex-col p-3">
-            <div id="input" class="flex flex-row">
-                <label class="block text-sm font-medium text-gray-700" for="distance">
+            <div id="input" class="flex flex-col">
+                <label class="block text-sm font-medium text-gray-700 px-3" for="distance">
                     Distance (mi):
                     <input id="distance" class="p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" type="number" bind:value={distanceMi} step="0.01" />
                 </label>
 
                 <br />
-                <label class="block text-sm font-medium text-gray-700" for="hours">
+                <label class="block text-sm font-medium text-gray-700 px-2" for="hours">
                     Hours:
                     <input class="p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" type="number" bind:value={hours} />
                 </label>
 
                 <br />
 
-                <label class="block text-sm font-medium text-gray-700">
+                <label class="block text-sm font-medium text-gray-700 px-2">
                     Minutes:
                     <input class="p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" type="number" bind:value={minutes} />
                 </label>
 
                 <br />
 
-                <label class="block text-sm font-medium text-gray-700">
+                <label class="block text-sm font-medium text-gray-700 px-2">
                     Seconds:
                     <input class="p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" type="number" bind:value={seconds} />
                 </label>
