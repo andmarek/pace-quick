@@ -1,12 +1,12 @@
 <script>
-    let distanceMi = 1; // Set initial value to avoid division by zero
+    let distanceMi = 2; // Set initial value to avoid division by zero
     let hours = 0;
-    let minutes = 0;
-    let seconds = 0;
+    let minutes = 4;
+    let seconds = 22;
     /**
      * @type {string}
      */
-    let desirablePace;
+    let formattedPace;
     /**
      * @type {string}
      */
@@ -15,15 +15,16 @@
      * @type {string}
      */
     let paceMile;
-    // Reactively calculate pace whenever distance or time values change
+
     $: if (distanceMi > 0) {
-      let totalMinutes = hours * 60 + minutes + seconds / 60;
+      let totalMinutes = (hours * 60) + minutes + (seconds / 60);
       paceMile = (totalMinutes / distanceMi).toFixed(2);
 
       let mins = Math.floor(parseFloat(paceMile));
-      const secs = Math.round((parseFloat(paceMile) - minutes) * 60);
 
-      desirablePace = `${mins}:${seconds < 10 ? '0' : ''}${seconds}`;
+      const secs = Math.round((parseFloat(paceMile) - totalMinutes) * 60);
+      const secz = parseFloat((seconds / distanceMi).toFixed(1));
+      formattedPace = `${mins}:${secz < 10 ? '0' : ''}${secz}`;
 
       let distanceKm = distanceMi / 0.621371;
       paceKm = (totalMinutes / distanceKm).toFixed(2);
@@ -33,7 +34,7 @@
     }
 </script>
 
-<body class="bg-zinc-50">
+<body class="flex bg-zinc-50">
     <div class="flex flex-col bg-zinc-50">  
         <h1 class="flex justify-center bg-indigo-500">Pace Calculator</h1>
 
@@ -67,7 +68,7 @@
             <br />
             <div id="output" class="flex flex-col">
                 <p class="block text-sm font-medium text-gray-700">Your pace (minutes per kilometer): {paceKm}</p>
-                <p class="block text-sm font-medium text-gray-700">Your pace (minutes per mile): {desirablePace}</p>
+                <p class="block text-sm font-medium text-gray-700">Your pace (minutes per mile): {formattedPace}</p>
             </div>
         </div>
     </div>
