@@ -34,9 +34,13 @@
     }
 </script>
 
-<body class="flex bg-zinc-50">
+<body class="flex bg-zinc-50 items-stretch">
     <div class="flex flex-col bg-zinc-50">  
-        <h1 class="flex justify-center bg-indigo-500">Pace Calculator</h1>
+        <nav class="flex gap-10 justify-center">
+            <h1 class="basis-1/4"> andmarek </h1>
+            <h1 class="basis-1/4">Pace Calculator</h1>
+            <h1 class="basis-1/2"> About </h1>
+        </nav>
 
         <div class="flex flex-col p-3">
             <div id="input" class="flex flex-row">
