@@ -9,6 +9,9 @@ export default {
           200: '#F5F5DC', // Creme color
         },
       },
+      fontFamily: {
+        'source-sans': ['Source Sans Pro', 'sans-serif'],
+      },
     },
   },
   plugins: [],

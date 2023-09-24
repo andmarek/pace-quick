@@ -75,20 +75,20 @@
     }
 </script>
 
-<body class="flex flex-col bg-zinc-50 w-full">
+<body class="flex flex-col bg-zinc-50 w-full font-source-sans">
     <nav class="bg-gray-100 p-4 shadow-md w-full">
         <div class="container mx-auto flex justify-between items-center">
-          <a href="/" class="text-2xl font-bold text-gray-800 hover:text-gray-600 transition duration-300">
+          <a href="/" class="text-2xl text-gray-800 hover:text-gray-600 transition duration-300">
             PaceQuick
           </a>
           <div class="space-x-4">
-            <a href="https://andmarek.com" class="text-lg text-gray-800 hover:text-gray-600 hover:underline transition duration-300">
+            <a href="https://andmarek.com" class="text-2xl text-gray-800 hover:text-gray-600 transition duration-300">
               andmarek
             </a>
             <button 
-              class="text-lg text-gray-800 hover:text-gray-600 bg-transparent border-none cursor-pointer p-0 focus:outline-none transition duration-300"
+              class="text-2xl text-gray-800 hover:text-gray-600 transition duration-300"
               on:click={() => showModal = true}>
-              About
+              about
             </button>
           </div>
         </div>
