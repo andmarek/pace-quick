@@ -1,9 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
+  mode: 'jit',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        cream: {
+          200: '#F5F5DC', // Creme color
+        },
+      },
+    },
   },
   plugins: [],
 }
-
